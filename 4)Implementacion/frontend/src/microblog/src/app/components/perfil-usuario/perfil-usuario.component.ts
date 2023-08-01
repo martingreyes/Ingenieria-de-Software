@@ -37,7 +37,7 @@ export class PerfilUsuarioComponent implements OnInit {
     }
 
     this.alias = this.route.snapshot.paramMap.get('alias');
-    this.MensajesAutorService.getMensajes(this.alias, this.token).subscribe(
+    this.MensajesAutorService.getMensajes(this.alias).subscribe(
       (data:any) => {
         this.arrayMensajes = data;
       }
@@ -57,7 +57,6 @@ export class PerfilUsuarioComponent implements OnInit {
         }
       }
     )
-
   }
 
   submit() {

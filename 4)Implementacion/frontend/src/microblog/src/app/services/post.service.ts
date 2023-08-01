@@ -122,8 +122,7 @@ export class MensajesAutorService {
     private httpClient: HttpClient
   ) { }
 
-  getMensajes(alias: string, token: string) {
-    let heads = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin', '*').set('Authorization', 'Bearer ' + token)
+  getMensajes(alias: string) {
     return this.httpClient.get(this.url + "/" + alias);
   }
 }

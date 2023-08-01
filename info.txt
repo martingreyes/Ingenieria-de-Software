@@ -10,6 +10,16 @@ Backend:
 La carpeta "resources" contiene las clases que actúan como controladores de tu aplicación Flask. 
 Estas clases manejan las solicitudes HTTP entrantes y hablan con la BD.
 
+Cuando escribimos en la BD con mongo (nuestra instancia de la clase PyMongo), por ej con:
+
+- mongo.db.messages.insert_one(JSON) enntonces mongo retorna:
+
+  pymongo.results.InsertOneResult que es un objeto que contiene informacion sobre la operacion
+
+- mongo.db.messages.find(JSON)
+  
+  pymongo.cursor.Cursor que es un objeto que permite recorrer los documentos resultantes de la consulta
+
 Clases de análisis o esteriotipos
 
 - Clase de interfaz: interactua con el usuario. Pueden ser formularios, páginas, pantallas, etc.
